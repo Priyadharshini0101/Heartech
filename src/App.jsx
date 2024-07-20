@@ -1,14 +1,16 @@
 import { useState,useEffect } from "react";
 import "./App.css";
 
+import {cupid,heartBackground,play,pause,happy,sad,audioBackground} from './assets/index.js'
+
 function App() {
   const [answer, setAnswer] = useState(false);
   const [count, setCount] = useState(0);
-  const [img, setImage] = useState("/src/assets/puuung-holding-hands.gif");
-  const [icon,setIcon] = useState("/src/assets/pause.png")
+  const [img, setImage] = useState(happy);
+  const [icon,setIcon] = useState(pause)
   const [a, setA] = useState(100);
   const [b, setB] = useState(50);
-  const [aud,setAud] = useState(new Audio("/Everything-I-Do.mp3"));
+  const [aud,setAud] = useState(new Audio(audioBackground));
   aud.loop = true;
   
   const handleClickNo = () => {
@@ -31,7 +33,7 @@ function App() {
     setA((a) => a + 10);
     setB((b) => b + 10);
     if (count == 25) {
-      setImage("/src/assets/puuung-sad.gif");
+      setImage(sad);
       setAnswer(true);
     } else {
       setCount((count) => count + 1);
@@ -62,10 +64,10 @@ function App() {
             if (aud.paused &&  !aud.ended  ) {
               aud.loop = true;
               aud.play();
-              setIcon("/src/assets/pause.png")
+              setIcon(pause)
             } else {
               aud.pause();
-              setIcon("/src/assets/play.png")
+              setIcon(play)
             }
           }}
         >
@@ -90,11 +92,11 @@ function App() {
         </div>
       ) : (
         <div
-          className='flex flex-col justify-center items-center z-[1] h-screen bg-[url("/src/assets/heart.gif")] bg-no-repeat bg-center '
+          className={`flex flex-col justify-center items-center z-[1] h-screen bg-[url(${heartBackground})] bg-no-repeat bg-center `}
      
         >
           <img
-            src="/src/assets/cupid.gif"
+            src={cupid}
             className="w-[200px] h-[200px] m-[25px]"
           ></img>
           <h2 className="text-black text-5xl">Will you go out with me?</h2>

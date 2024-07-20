@@ -1,0 +1,25 @@
+:root {
+ 
+ 
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #ffffff;
+
+
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#noButton {
+  position: absolute;
+  margin-left: 150px;  
+  transition: 0.5s;
+}
+
+#yesButton {
+  position: relative;
+  margin-right: 150px;
+}
+
+

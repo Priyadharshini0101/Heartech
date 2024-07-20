@@ -92,7 +92,7 @@ function App() {
         </div>
       ) : (
         <div
-          className={`flex flex-col justify-center items-center z-[1] h-screen bg-[url(${heartBackground})] bg-no-repeat bg-center `}
+          className={`flex flex-col justify-center items-center z-[1] h-screen bg-[url('/src/assets/images/heart.gif')] bg-no-repeat bg-center `}
      
         >
           <img

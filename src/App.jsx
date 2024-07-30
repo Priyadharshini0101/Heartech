@@ -14,7 +14,12 @@ function App() {
   aud.loop = true;
   
   const handleClickNo = () => {
-       
+    if (count == 25) {
+      setImage(sad);
+      setAnswer(true);
+    } else {
+      setCount((count) => count + 1);
+    }
    
     const no = document.getElementById("noButton");
     var x = Math.round(
@@ -32,12 +37,7 @@ function App() {
 
     setA((a) => a + 10);
     setB((b) => b + 10);
-    if (count == 25) {
-      setImage(sad);
-      setAnswer(true);
-    } else {
-      setCount((count) => count + 1);
-    }
+  
   };
 
    useEffect(() => {

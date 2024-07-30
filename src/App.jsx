@@ -79,7 +79,7 @@ function App() {
       </div>
       {answer ? (
         <div className="h-screen  flex flex-col justify-center items-center bg-[#fcfefc]">
-          <img src={count < 25 ? happy : sad} className="w-[300px] h-[500px] rounded-[50px]"></img>
+          <img src={answer ? happy : sad} className="w-[300px] h-[500px] rounded-[50px]"></img>
         </div>
       ) : (
         <div

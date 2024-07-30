@@ -6,7 +6,7 @@ import {cupid,heartBackground,play,pause,happy,sad,audioBackground} from './asse
 function App() {
   const [answer, setAnswer] = useState(false);
   const [count, setCount] = useState(0);
-  const [img, setImage] = useState(happy);
+  
   const [icon,setIcon] = useState(pause)
   const [a, setA] = useState(100);
   const [b, setB] = useState(50);
@@ -75,20 +75,11 @@ function App() {
        
           
         </button>
-        {/* <button
-          className="absolute right-0 top-0 m-[10px]"
-          onClick={() => {
-            audio.loop = false;
-            audio.pause();
-            
-          }}
-        >
-         
-        </button> */}
+      
       </div>
       {answer ? (
         <div className="h-screen  flex flex-col justify-center items-center bg-[#fcfefc]">
-          <img src={img} className="w-[300px] h-[500px] rounded-[50px]"></img>
+          <img src={count < 25 ? happy : sad} className="w-[300px] h-[500px] rounded-[50px]"></img>
         </div>
       ) : (
         <div

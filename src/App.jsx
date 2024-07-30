@@ -17,6 +17,7 @@ function App() {
     if (count == 25) {
       setImage(sad);
       setAnswer(true);
+      return;
     } else {
       setCount((count) => count + 1);
     }
